@@ -19,12 +19,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 
 @Composable
-fun ImageSearchScreen(viewModel: ImageViewModel = hiltViewModel()) {
+fun ImageSearchScreen(viewModel: ImageViewModel = hiltViewModel(), modifier: Modifier) {
 
     val result = viewModel.imageList.value
     val query = remember { mutableStateOf("") }
@@ -41,10 +42,11 @@ fun ImageSearchScreen(viewModel: ImageViewModel = hiltViewModel()) {
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(modifier = modifier) {
 
         Column {
-            TextField(value = query.value, onValueChange = {
+            TextField( modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                value = query.value, onValueChange = {
                 query.value = it
                 viewModel.updateQuery(query.value)
             },
@@ -62,9 +64,10 @@ fun ImageSearchScreen(viewModel: ImageViewModel = hiltViewModel()) {
                 LazyColumn {
                     items(it) {
                         AsyncImage(
+                            contentScale = ContentScale.Crop,
                             model = it.imageUrl, contentDescription = "Image",
                             modifier = Modifier.fillMaxWidth()
-                                .height(200.dp)
+                                .height(300.dp)
                                 .padding(vertical = 4.dp)
                         )
                     }

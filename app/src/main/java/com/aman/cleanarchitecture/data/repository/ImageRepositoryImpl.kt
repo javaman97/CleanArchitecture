@@ -1,5 +1,6 @@
 package com.aman.cleanarchitecture.data.repository
 
+import com.aman.cleanarchitecture.common.API_KEY
 import com.aman.cleanarchitecture.common.toDomainModel
 import com.aman.cleanarchitecture.data.network.ApiService
 import com.aman.cleanarchitecture.domain.model.ImageModel
@@ -9,7 +10,7 @@ class ImageRepositoryImpl(private val apiService: ApiService):ImageRepository {
     override suspend fun getSearchImage(query: String): List<ImageModel> {
         try{
             return apiService.getSearchImage(
-                key = "46999883-c4ba90dc327939302503459d9&q",
+                key = API_KEY,
                 query = query
             ).hits.map { it.toDomainModel() }
 

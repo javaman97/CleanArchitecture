@@ -5,7 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-const val  BASE_URL = "https://pixabay.com/"
 interface ApiService {
     // https://pixabay.com/api/?key=API_SERVICE=yellow+flowers&image_type=photo&pretty=true
 

@@ -9,3 +9,6 @@ fun HitDTO.toDomainModel():ImageModel{
         imageUrl = this.largeImageURL
     )
 }
+
+const val API_KEY="46999883-c4ba90dc327939302503459d9"
+const val  BASE_URL = "https://pixabay.com/"

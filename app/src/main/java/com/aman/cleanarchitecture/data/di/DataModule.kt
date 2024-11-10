@@ -1,7 +1,7 @@
 package com.aman.cleanarchitecture.data.di
 
+import com.aman.cleanarchitecture.common.BASE_URL
 import com.aman.cleanarchitecture.data.network.ApiService
-import com.aman.cleanarchitecture.data.network.BASE_URL
 import com.aman.cleanarchitecture.data.repository.ImageRepositoryImpl
 import com.aman.cleanarchitecture.domain.repository.ImageRepository
 import dagger.Module
