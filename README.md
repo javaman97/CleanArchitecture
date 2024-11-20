@@ -56,7 +56,7 @@ The dependencies flow inwards:
 - **ViewModel**: Manages UI-related data lifecycle-consciously.
 - **LiveData / StateFlow**: For handling UI-related state changes.
 - **Retrofit**: A type-safe HTTP client for making API calls.
-- **Room** (Optional): A local database library for persistence.
+- **Coil** : An image loading library for Android and Compose Multiplatform.
 - **Kotlin Coroutines**: For asynchronous operations and handling background tasks.
 - **Hilt**: Dependency injection library (if used for managing dependencies).
 
