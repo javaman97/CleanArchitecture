@@ -1,7 +1,3 @@
-Here's an example of a README file for your GitHub repository, based on the repository name "CleanArchitecture" (assuming it follows the principles of Clean Architecture). You can customize the sections according to the specific details of your project.
-
----
-
 # Clean Architecture - Android App
 
 This is a sample Android application that demonstrates the principles of **Clean Architecture**. The app follows a modular approach to ensure separation of concerns, maintainability, and scalability.
